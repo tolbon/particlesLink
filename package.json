@@ -1,0 +1,22 @@
+{
+  "name": "particle-link",
+  "version": "1.0.0",
+  "description": "Reproduction d'un petit système de particules qui se lient en fonction de leur distance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolbon/particlesLink.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tolbon/particlesLink/issues"
+  },
+  "homepage": "https://github.com/tolbon/particlesLink#readme",
+  "dependencies": {
+    "typescript": "^2.3.4"
+  }
+}
