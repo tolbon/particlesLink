@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/tolbon/particlesLink#readme",
   "dependencies": {
-    "typescript": "^2.3.4"
+    "typescript": "^2.6.2"
   }
 }

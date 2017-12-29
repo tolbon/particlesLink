@@ -1,13 +1,13 @@
 "use strict";
-var Param = (function () {
+var Param = /** @class */ (function () {
     function Param() {
     }
+    Param.dist2Pts = 2000.0;
+    Param.minAlpha = 0.0;
+    Param.maxAlpha = 1.0;
+    Param.nbPoints = 100;
     return Param;
 }());
-Param.dist2Pts = 2000.0;
-Param.minAlpha = 0.0;
-Param.maxAlpha = 1.0;
-Param.nbPoints = 100;
 var canvas = null;
 var canvasHeight;
 var canvasWidth;
@@ -116,7 +116,7 @@ function getMousePos(evt) {
         y: evt.clientY - rectCanvas.top
     };
 }
-var Point = (function () {
+var Point = /** @class */ (function () {
     function Point(x, y, mX, mY, col) {
         if (x === void 0) { x = 0.0; }
         if (y === void 0) { y = 0.0; }
@@ -139,7 +139,7 @@ var Point = (function () {
     };
     return Point;
 }());
-var Color = (function () {
+var Color = /** @class */ (function () {
     function Color(r, g, b) {
         this.colR = 0;
         this.colG = 0;
