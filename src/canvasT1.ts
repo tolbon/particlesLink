@@ -52,7 +52,6 @@ function initCanvas(): void {
 
 
 function createUniverse(): void {
-    let i: number = 0;
     let len: number = Param.nbPoints;
     let posXRandom: number = 0;
     let posYRandom: number = 0;
@@ -62,7 +61,7 @@ function createUniverse(): void {
 
     _listP = new Array<Point>(Param.nbPoints);
 
-    for (i = 0; i < len; i++) {
+    for (let i = 0; i < len; i++) {
         posXRandom = Math.random() * canvasWidth;
         posYRandom = Math.random() * canvasHeight;
         moveXRdm = Math.random();
@@ -84,8 +83,6 @@ function loop() : void
 }
 
 function lambdaColor() {
-    let i: number = 0;
-    let j: number = 0;
     let iLenght: number = _listP.length;
     let distTmp: number = 0.0;
     let alphaTmp: number = 0.0;
@@ -93,7 +90,7 @@ function lambdaColor() {
 
     m_ctx!.clearRect(0, 0, canvasWidth, canvasHeight);
 
-    for (i = 0; i < iLenght; i++) {
+    for (let i = 0; i < iLenght; i++) {
         _listP[i].nextMove();
         if (_listP[i].posX < 0 || _listP[i].posX > canvasWidth) {
             _listP[i].moveX = -_listP[i].moveX;
@@ -107,7 +104,7 @@ function lambdaColor() {
         m_ctx!.lineCap = "square";
         m_ctx!.stroke();        
                 
-        for (j = i + 1; j < iLenght; j++) {
+        for (let j = i + 1; j < iLenght; j++) {
             distTmp = _listP[i].distance2Pts(_listP[j]);
             if (distTmp < Param.dist2Pts) {
                
@@ -173,7 +170,7 @@ class Color {
     private colR: number = 0;
     private colG: number = 0;
     private colB: number = 0;
-    private computeStr: string;
+    private readonly computeStr: string;
 
     public constructor(r: number, g: number, b: number) {
         this.colR = r;
